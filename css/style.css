@@ -5,7 +5,7 @@
   font-family: sans-serif;
 }
 
-.header ul{
+.header ul {
   display: flex;
   list-style: none;
 }
@@ -20,7 +20,7 @@
   font-size: 18px;
 }
 
-.header ul li{
+.header ul li {
   border: 1px solid;
   padding: 10px 15px;
   color: #0099c4;
@@ -31,9 +31,15 @@
   color: #0099c4;
 }
 
-img {
+.header img {
   width: 100px;
-  height:90px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.hero img {
+  width: 1080px;
+  height: 500px;
 }
 
 .hero {
@@ -59,10 +65,166 @@ img {
   text-align: center;
 }
 
- .circle {
+.circle {
   width: 200px;
   height: 200px;
   background-color: #0099c4;
   border-radius: 50%;
 }
 
+.my-profile {
+  background-color: #e0f2f7;
+  padding: 50px;
+  font-size: 24px;
+  border-bottom: 1px solid #0099c4;
+  text-align: left;
+}
+
+.my-profile h1 {
+  text-align: center;
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+  justify-content: center;
+  height: 80vh;
+}
+
+.my-profile img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.portfolio {
+  background-color: #e0f2f7;
+  padding: 50px;
+  font-size: 24px;
+  border-bottom: 1px solid #0099c4;
+  height: 80vh;
+  text-align: center;
+}
+
+.portfolio-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 200px;
+  justify-content: center;
+  gap: 20px;
+}
+
+.portfolio-image {
+  border-radius: 50%;
+  background-color: #0099c4;
+  width: 200px;
+  height: 200px;
+}
+
+.message-us {
+  background-color: #e0f2f7;
+  padding: 50px;
+  font-size: 24px;
+  border-bottom: 1px solid #0099c4;
+}
+
+.message-container {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+.message-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 400px;
+}
+
+#displayMessage {
+  width: 400px;
+}
+
+@media (max-width: 1024px) {
+  .hero img {
+    width: 100%;
+    height: auto;
+  }
+
+  .portfolio-container {
+    margin: 50px;
+  }
+
+  .locations-co {
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+  }
+
+  .profile-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .message-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .header ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .message-form,
+  #displayMessage {
+    width: 100%;
+  }
+
+  .portfolio-container {
+    flex-direction: column;
+    margin: 20px;
+  }
+
+  .portfolio-image,
+  .circle,
+  .my-profile img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero,
+  .headquarter,
+  .my-profile,
+  .portfolio,
+  .message-us {
+    padding: 20px;
+    font-size: 18px;
+    height: auto;
+
+  }
+
+
+  .portfolio-image {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+  }
+
+  .header img {
+    width: 80px;
+    height: 80px;
+  }
+}

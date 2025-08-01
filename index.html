@@ -6,52 +6,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mini Project</title>
     <link rel="stylesheet" href="./css/style.css" />
-    <!-- <script src="./script/script.js"></script>// -->
   </head>
   <body>
+    <!-- Make header -->
     <header class="header">
       <div class="logo">
-        <img src="./image/Screenshot_2025-07-31_192636-removebg-preview.png" alt="Logo" />
+        <img src="./image/download (3).jpg" alt="Logo" />
       </div>
       <nav>
         <ul>
-          <li><a>Home</a></li>
-          <li><a href="about.html">Our Profile</a></li>
-          <li><a>Portofolio</a></li>
-          <li><a>Message Us</a></li>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#my-profile">My Profile</a></li>
+          <li><a href="#portfolio">Portofolio</a></li>
+          <li><a href="#message-us">Message Us</a></li>
         </ul>
       </nav>
     </header>
 
+    <!-- Make main content -->
     <main>
-      <section class="hero">
-        <h1 id="welcome-message">Hi ..... Welcome To Our Website!</h1>
-        <p>
-          We are a company that specializes in providing the best services for
-          our customers. <br> Our team is dedicated to <br> delivering high-quality
-          solutions tailored to your needs.
-        </p>
+      <!-- Make Hero Section -->
+      <section class="hero" id="hero">
+        <h1 id="welcome-message">Hi ..... Welcome To My Website!</h1>
 
-        <img src="" alt="">
+        <img src="/image/download (2).jpg" alt="" />
       </section>
 
-      <section class="headquarter">
-        <h1>Our Headquarter</h1>
-        <div class="locations-co">
-          <div class="location">
-            <div class="circle"></div>
-            <p>Jakarta</p>
+      <!-- Make My Profile Section -->
+      <section class="my-profile" id="my-profile">
+        <h1>My Profile</h1>
+        <div class="profile-container">
+          <img src="/image/download (3).jpg" alt="" />
+          <p>
+            Hello, My Name is <span style="color: #0099c4">Slyvia</span> <br />
+            and I am a
+            <span style="color: #0099c4">Frontend Web Developer</span> <br />
+            Still learning and I am currently learning
+            <span style="color: #0099c4">HTML, CSS, and JavaScript</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Make Portfolio Section -->
+      <section class="portfolio" id="portfolio">
+        <h1>Portfolio</h1>
+        <div class="portfolio-container">
+          <div class="portfolio-item">
+            <div class="portfolio-image"></div>
+            <p>Portfolio Item 1</p>
           </div>
-          <div class="location">
-            <div class="circle"></div>
-            <p>Bandung</p>
+          <div class="portfolio-item">
+            <div class="portfolio-image"></div>
+            <p>Portfolio Item 2</p>
           </div>
-          <div class="location">
-            <div class="circle"></div>
-            <p>Surabaya</p>
+          <div class="portfolio-item">
+            <div class="portfolio-image"></div>
+            <p>Portfolio Item 3</p>
+          </div>
+        </div>
+      </section>
+      <!-- Make Message Us Section -->
+      <section class="message-us" id="message-us">
+        <h1>Message Us</h1>
+        <div class="message-container">
+          <form class="message-form" id="messageForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+          </form>
+
+          <div
+            id="displayMessage"
+            style="
+              margin-top: 20px;
+              border: 1px solid #ccc;
+              padding: 10px;
+              display: none;
+            "
+          >
+            <p><strong>Nama:</strong> <span id="displayName"></span></p>
+            <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+            <p><strong>Pesan:</strong> <span id="displayContent"></span></p>
           </div>
         </div>
       </section>
     </main>
+    <script src="./script/script.js"></script>
   </body>
 </html>
